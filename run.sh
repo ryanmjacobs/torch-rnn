@@ -13,7 +13,7 @@ python scripts/preprocess.py \
   --output_h5 my_data.h5 \
   --output_json my_data.json
 
-th $nogpu train.lua -input_h5 my_data.h5 -input_json my_data.json
-#th $nogpu train.lua -input_h5 my_data.h5 -input_json my_data.json -model_type rnn -num_layers 3 -rnn_size 256
+th train.lua -input_h5 my_data.h5 -input_json my_data.json $nogpu
+#th train.lua -input_h5 my_data.h5 -input_json my_data.json -model_type rnn -num_layers 3 -rnn_size 256 $nogpu
 
-#th $nogpu sample.lua -checkpoint cv/checkpoint_10000.t7 -length 2000
+#th sample.lua -checkpoint cv/checkpoint_10000.t7 -length 2000 $nogpu
