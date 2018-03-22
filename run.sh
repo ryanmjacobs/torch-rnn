@@ -4,7 +4,7 @@ nogpu="-gpu -1"
 
 source $HOME/torch/install/bin/torch-activate
 
-virtualenv .virtualenv
+virtualenv -p python3 .virtualenv
 source .virtualenv/bin/activate
 pip install -r requirements.txt
 
